@@ -1,0 +1,90 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">BMI Calculator</h1>
+        </div>
+    </div>
+    <div class="row align-items-baseline">
+        <div class="col-12 col-md-6 mt-3">
+            <div 
+                (click)="getFemale()"
+                [ngClass]="{ 'disableSex': sex === 'female' }" 
+                class="item item-hover c-pointer">
+                <div class="content">
+                    <i class="fa-sharp fa-solid fa-mars"></i>
+                    <p class="mt-3">Masculino</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 mt-3">
+            <div 
+                (click)="getMale()"
+                [ngClass]="{ 'disableSex': sex === 'male' }" 
+                class="item item-hover c-pointer">
+                <div class="content">
+                    <i class="fa-sharp fa-solid fa-venus"></i>
+                    <p class="mt-3">Femenino</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-4">
+            <div class="item height">
+                <div class="content">
+                    <p>Altura</p>
+                    <div class="wrap-height">
+                        <span class="numStyles">{{ height }}</span>
+                        <span>cm</span>
+                    </div>
+                    <input
+                        type="range" 
+                        [value]="height"
+                        (input)="changeHeight( $event )"
+                        min="120" 
+                        max="220" 
+                        class="form-range range">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 mt-4">
+            <div class="item icons">
+                <div class="content">
+                    <p>Peso</p>
+                    <span class="numStyles">{{ weight }}</span>
+                    <div class="wrap-icons">
+                        <button (click)="lessWeight()" class="btn btn-outline-danger">
+                            <i class="fa-sharp fa-solid fa-minus"></i>
+                        </button>
+                        <button (click)="addWeight()" class="btn btn-outline-danger">
+                            <i class="fa-sharp fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 mt-4">
+            <div class="item icons">
+                <div class="content">
+                    <p>Edad</p>
+                    <span class="numStyles">{{ year }}</span>
+                    <div class="wrap-icons">
+                        <button (click)="lessYear()" class="btn btn-outline-danger">
+                            <i class="fa-sharp fa-solid fa-minus"></i>
+                        </button>
+                        <button (click)="addYear()" class="btn btn-outline-danger">
+                            <i class="fa-sharp fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4 mb-4">
+        <div class="col-12">
+            <button (click)="calculateBIM()" class="btn btn-outline-danger btn-lg w-100">Calcular</button>
+        </div>
+    </div>
+</div>

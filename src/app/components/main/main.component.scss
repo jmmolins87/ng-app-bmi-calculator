@@ -1,0 +1,71 @@
+.item {
+    background: #ff111328;
+    border-radius: 20px;
+    height: 135px;
+    &-hover {
+        transition: .2s ease-in-out;
+        &:hover {
+            background: #dc3545;
+        }
+    }
+    &.height {
+        height: 165px;
+    }
+    &.icons {
+        height: 200px;
+        @media screen and ( max-width: 768px ) {
+            height: 175px;
+        }
+    }
+    &.disableSex {
+        background: #7d2f2f33;
+        cursor: not-allowed;
+    }
+    .content {
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        i {
+            font-size: 45px;
+        }
+        .wrap-height {
+            display: flex;
+            box-sizing: border-box;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: fit-content;
+        }
+        .numStyles {
+            font-size: 50px;
+            font-weight: 800;
+            margin-right: 5px;
+        }
+        .range {
+            width: 90%;
+            &::-webkit-slider-thumb {
+                background: #dc3545;
+            }
+        }
+        .wrap-icons {
+            display: flex;
+            box-sizing: border-box;
+            justify-content: space-between;
+            align-items: center;
+            width: 35%;
+            button i {
+                font-size: 15px;
+            }
+            @media screen and ( max-width: 768px ) {
+                width: 20%;
+            }
+        }
+    }
+}
+
+
+.c-pointer {
+    cursor: pointer;
+}
