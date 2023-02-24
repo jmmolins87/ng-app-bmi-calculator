@@ -18,29 +18,16 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  lessWeight() {
-    this.weight -= 1;
-  }
-  addWeight() {
-    this.weight += 1;
-  }
-  lessYear() {
-    this.year -= 1;
-  }
-  addYear() {
-    this.year += 1;
-  }
-  changeHeight( event: any ) {
-    this.height = event.target.value;
-  }
-  getMale() {
-    this.sex = 'male'
-  }
-  getFemale() {
-    this.sex = 'female'
-  }
+  lessWeight() { this.weight -= 1; }
+  addWeight() { this.weight += 1; }
+  lessYear() { this.year -= 1; }
+  addYear() { this.year += 1; }
+  changeHeight( event: any ) { this.height = event.target.value; }
+  getMale() { this.sex = 'male' }
+  getFemale() { this.sex = 'female' }
   calculateBIM() {
-    this.router.navigate(['/results'])
+    let bmi = this.weight / Math.pow( this.height/100, 2 );
+    this.router.navigate(['/results', bmi.toFixed( 1 )]);
   }
 
 }

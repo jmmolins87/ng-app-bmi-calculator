@@ -2,7 +2,7 @@
     background: #ff111328;
     border-radius: 20px;
     height: 135px;
-    &-hover {
+    &--hover {
         transition: .2s ease-in-out;
         &:hover {
             background: #dc3545;
@@ -63,9 +63,4 @@
             }
         }
     }
-}
-
-
-.c-pointer {
-    cursor: pointer;
 }

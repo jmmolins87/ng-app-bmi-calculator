@@ -1,1 +1,34 @@
-<p>results works!</p>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">Resultado</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div *ngIf="overWeight" class="wrap-result overWeight">
+                <h3 class="weight-result text-danger text-center fs-1">Exceso de Peso</h3>
+                <h2 class="bim-result text-center">17.9</h2>
+                <p class="description-result text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+                    deserunt cumque facilis, nesciunt eligendi itaque rerum iure blanditiis commodi vero qui, odio possimus nostrum
+                    facere omnis autem! Necessitatibus, magnam minus.</p>
+            </div>
+            <div *ngIf="normalWeight" class="wrap-result normalWeight">
+                <h3 class="weight-result text-success text-center fs-1">Peso Normal</h3>
+                <h2 class="bim-result text-center">17.9</h2>
+                <p class="description-result text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum deserunt cumque facilis, nesciunt eligendi itaque rerum iure blanditiis commodi vero qui, odio possimus nostrum facere omnis autem! Necessitatibus, magnam minus.</p>
+            </div>
+            <div *ngIf="lackOfWeight" class="wrap-result lackOfWeight">
+                <h3 class="weight-result text-warning text-center fs-1">Falta de Peso</h3>
+                <h2 class="bim-result text-center">17.9</h2>
+                <p class="description-result text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+                    deserunt cumque facilis, nesciunt eligendi itaque rerum iure blanditiis commodi vero qui, odio possimus nostrum
+                    facere omnis autem! Necessitatibus, magnam minus.</p>
+            </div>
+        </div>
+    <div class="row mt-4 mb-4">
+        <div class="col-12">
+            <button (click)="toReCalulate()" class="btn btn-outline-danger btn-lg w-100">re-Calcular</button>
+        </div>
+    </div>
+</div>
